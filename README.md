@@ -1,6 +1,6 @@
 # myGulp
 
-Comandos para instalação, antes de tudo installe o gulp de forma global:
+Comandos para instalação, porém se for a primeira vez que está utilizando gulp e bower, os instalem globalmente:
 
 ```sh
 $ npm install -g gulp

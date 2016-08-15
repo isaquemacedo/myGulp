@@ -2,10 +2,10 @@
 
 Comandos para instalação, antes de tudo installe o gulp de forma global:
 
-``
+```sh
 $ npm install -g gulp
 $ npm install -g bower
-``
+```
 
 No diretório do projeto, execute os comandos:
 

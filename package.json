@@ -18,6 +18,7 @@
   "homepage": "https://github.com/isaquemacedo/myGulp#readme",
   "devDependencies": {
     "browser-sync": "^2.14.0",
+    "browserify": "^13.1.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7"

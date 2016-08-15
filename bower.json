@@ -1,6 +1,9 @@
 {
-  "name": "howto",
-  "version": "0.0.0",
+  "name": "myBower",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "author": "Isaque Alves de Macedo <isaque.mace@gmail.com>",
   "license": "MIT",
   "private": true,
   "ignore": [

@@ -7,9 +7,15 @@ var wiredep = require('wiredep').stream;
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'wiredep'], function() {
 
-    browserSync.init({
-        server: "./app"
-    });
+	browserSync.init({
+		server: {
+			baseDir: 'app',
+			index: 'index.html',
+			routes: {
+				'/bower_components': 'bower_components'
+			}
+		}
+	});
 
     gulp.watch("app/scss/*.scss", ['sass']);
     gulp.watch("app/*.html").on("change", reload);

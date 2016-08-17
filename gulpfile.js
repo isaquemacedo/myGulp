@@ -18,15 +18,15 @@ gulp.task('serve', ['sass', 'wiredep'], function() {
 	});
 
     gulp.watch("app/scss/*.scss", ['sass']);
-    gulp.watch("app/*.html").on("change", reload);
+    gulp.watch('app/**/*').on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("app/scss/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("app/css"))
-        .pipe(browserSync.stream());
+  return gulp.src("app/scss/*.scss")
+      .pipe(sass())
+      .pipe(gulp.dest("app/css"))
+      .pipe(browserSync.stream());
 });
 
 gulp.task('default', ['serve']);

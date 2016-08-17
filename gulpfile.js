@@ -19,6 +19,8 @@ gulp.task('serve', ['sass', 'wiredep'], function() {
 
     gulp.watch("app/scss/*.scss", ['sass']);
     gulp.watch('app/**/*').on('change', browserSync.reload);
+
+    gulp.watch('bower.json', ['wiredep']);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -38,4 +40,13 @@ gulp.task('wiredep', function () {
       goes: 'here'
     }))
     .pipe(gulp.dest('app/'));
+});
+
+gulp.task('build', function() {
+  return gulp.src([
+    'app/**/*.css',
+    'app/**/*.js',
+    'app/*.html'
+    ], {dot: true})
+       .pipe(gulp.dest('build'));
 });
